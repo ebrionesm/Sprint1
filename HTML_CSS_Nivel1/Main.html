@@ -1,112 +1,117 @@
 <!DOCTYPE html>
 <style>
     .bloque-arriba{
-        margin: 0.5%;
         background-color:indianred;
         padding-top: 1%;
         padding-bottom: 1%;
         padding-left: 0.5%;
-        display: inline-block;
-    }
-
-    .logo{
-        padding-right: 12.25%;
     }
     
 
     .nav {
-        padding-right: 55%;
+        flex-grow: 4;
     }
 
     .logo, .social {
-        padding-right: 13.6%;
+        flex-grow: 1;
     }
 
     .logo, .social, .nav {
-        margin: 1.5%;
-        margin-right: 0.25%;
+        margin: 2%;
+        margin-right: 0.5%;
+    }
+
+    .social {
+        margin-right: 2%;
     }
 
     .container{
+        display: flex;
+        flex-wrap: wrap;
         background-color: black;
         padding: 1%;
-        margin: 1%;
+        margin-top: 1%;
+        margin-bottom: 1%;
+        justify-content: space-around;
         max-width: 1200px;
     }
 
     .up-div {
         background-color:darkslategrey;
         margin: 1%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 97.5%;
         
     }
 
     .banner-div {
+        justify-content: space-around;
         background-color:goldenrod;
-        padding: 0.5%;
         margin: 1%;
-        margin-top: 2%;
+        width: 97.5%;
     }
 
     .banner {
-        margin: 1.25%;
-        padding: 0.5%;
+        flex-grow: 1;
+        margin: 1.75%;
+        padding: 1%;
         background-color: yellow;
-        padding-right: 80%;
     }
 
     .article-nav {
-        display: inline-block;
+        display: flex;
+        flex-grow: 5;
+        flex-direction: column;
+        justify-content: space-around;
         background-color: grey;
-        width: 75%;
         margin: 1%;
     }
 
     .article-block {
+        display: flex;
+        flex-flow: row wrap;
         margin: 1%;
+        justify-content: start;
+        align-items: flex-start;
     }
 
     .article {
-        display: inline-block;
         background-color: darkslategray;
         padding: 1%;
-        width: 45%;
+        width: 45.5%;
         margin: 1.25%;
     }
 
     .navigation {
-        display: inline-block;
         background-color: cadetblue;
         padding: 1%;
-        width: 93%;
         margin: 2.25%;
         margin-top: 0;
     }
 
     .publicidad-container {
-        display: inline-block;
-        vertical-align: top;
+        display: flex;
+        flex-grow: 1;
+        flex-direction: column;
         background-color: cadetblue;
         padding: 1%;
         margin: 1%;
-        width: 18.5%;
-        padding-bottom: 7.25%;
     }
 
     .publicidad {
-        display: inline-block;
         background-color: yellow;
-        padding: 2.5%;
-        padding-top: 4%;
-        padding-bottom: 4%;
-        width: 93%;
-        margin: 2.25%;
+        padding: 2%;
+        margin: 3%;
     }
 
     .pie {
+        display: flex;
         margin: 1.25%;
         padding: 0.5%;
+        flex-grow: 1;
         background-color: yellow;
-        padding-right: 80%;
     }
 </style>
 <html>
