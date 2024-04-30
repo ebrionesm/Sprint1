@@ -1,134 +1,23 @@
 <!DOCTYPE html>
-<style>
-    .bloque-arriba{
-        background-color:indianred;
-        padding-top: 1%;
-        padding-bottom: 1%;
-        padding-left: 0.5%;
-    }
-    
 
-    .nav {
-        flex-grow: 4;
-    }
-
-    .logo, .social {
-        flex-grow: 1;
-    }
-
-    .logo, .social, .nav {
-        margin: 2%;
-        margin-right: 0.5%;
-    }
-
-    .social {
-        margin-right: 2%;
-    }
-
-    .container{
-        display: flex;
-        flex-wrap: wrap;
-        background-color: black;
-        padding: 1%;
-        margin-top: 1%;
-        margin-bottom: 1%;
-        justify-content: space-around;
-        max-width: 1200px;
-    }
-
-    .up-div {
-        background-color:darkslategrey;
-        margin: 1%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        width: 97.5%;
-        
-    }
-
-    .banner-div {
-        justify-content: space-around;
-        background-color:goldenrod;
-        margin: 1%;
-        width: 97.5%;
-    }
-
-    .banner {
-        flex-grow: 1;
-        margin: 1.75%;
-        padding: 1%;
-        background-color: yellow;
-    }
-
-    .article-nav {
-        display: flex;
-        flex-grow: 5;
-        flex-direction: column;
-        justify-content: space-around;
-        background-color: grey;
-        margin: 1%;
-    }
-
-    .article-block {
-        display: flex;
-        flex-flow: row wrap;
-        margin: 1%;
-        justify-content: start;
-        align-items: flex-start;
-    }
-
-    .article {
-        background-color: darkslategray;
-        padding: 1%;
-        width: 45.5%;
-        margin: 1.25%;
-    }
-
-    .navigation {
-        background-color: cadetblue;
-        padding: 1%;
-        margin: 2.25%;
-        margin-top: 0;
-    }
-
-    .publicidad-container {
-        display: flex;
-        flex-grow: 1;
-        flex-direction: column;
-        background-color: cadetblue;
-        padding: 1%;
-        margin: 1%;
-    }
-
-    .publicidad {
-        background-color: yellow;
-        padding: 2%;
-        margin: 3%;
-    }
-
-    .pie {
-        display: flex;
-        margin: 1.25%;
-        padding: 0.5%;
-        flex-grow: 1;
-        background-color: yellow;
-    }
-</style>
 <html>
+    <head>
+        <link rel="stylesheet" href="html_ej.css">
+    </head>
     <body>
         <div class="container">
-            <div class = "up-div">
-                <p class = "bloque-arriba logo">.logo</p>
-                <p class = "bloque-arriba nav">.nav</p>
-                <p class = "bloque-arriba social">.social</p>
+            <div class = "up-container">
+                <p class = "logo">.logo</p>
+                <p class = "nav">.nav</p>
+                <p class = "social">.social</p>
             </div>
-            <div class = "banner-div">
+            <div class = "banner-container">
                 <h1 class="banner">.banner</h1>
             </div>
         </div>
         <div class="container">
-            <div class ="article-nav">
-                <div class="article-block">
+            <div class ="article-nav-container">
+                <div class="article-container">
                     <p class = "article">.article</p>
                     <p class = "article">.article</p>
                     <p class = "article">.article</p>
