@@ -1,39 +1,39 @@
 @media only screen and (max-width: 600px)
 {
-    [class*="-container"]{
+    [class*="container"]{
         flex-flow: column nowrap;
     }
 }
 
 @media only screen and (min-width: 600px)
 {
-    [class*="-container"]{
-        flex-direction:column;
-    }
-    [class*="article-container"]{
+    [class="container"], [class="article-container"]{
         flex-flow: row wrap;
     }
-    [class*="article"]{
+
+    [class="up-container"],  [class="article-nav-container"], [class="second-container"]{
+        flex-flow: column nowrap;
+    }
+
+    [class="article"] {
         width: 40%;
     }
-
-    [class*="article-nav-container"]{
-        width: 70%;
-    }
-
-    [class*="publicidad-container"]{
-        width: 70%;
-    }
+    
 }
 
 @media only screen and (min-width: 992px)
 {
-    [class*="-container"]{
-        flex-direction:row;
+    [class*="container"]{
+        flex-flow: row wrap;
     }
-    [class*="article-nav-container"]{
-        flex-direction:column;
+    
+    [class="article-nav-container"]  {
+        flex-grow: 5;
     }
+    [class="publicidad-container"] {
+        flex-grow: 1;
+    }
+
 }
 
 
@@ -50,13 +50,12 @@
     padding-top: 1%;
     padding-bottom: 1%;
     padding-left: 1%;
-    margin: 1%;
+    margin: 1.75%;
 }
 
-.container{
+.container, .second-container{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
     background-color: black;
     padding: 1%;
     margin-top: 1%;
@@ -92,11 +91,11 @@
     display: flex;
     background-color: grey;
     margin: 1%;
-    flex-grow: 20;
 }
 
 .article-container {
     display: flex;
+    flex-grow: 1;
     margin: 1%;
     width: 97.5%;
 }
@@ -105,7 +104,7 @@
     background-color: darkslategray;
     flex-grow: 1;
     padding: 2%;
-    margin: 2%;
+    margin: 1.75%;
     margin-top: 1%;
     margin-bottom: 1%;
 }
@@ -114,7 +113,8 @@
     background-color:aquamarine;
     flex-grow: 1;
     padding: 2%;
-    margin: 3%;
+    margin: 2.75%;
+    margin-right: 3.25%;
     margin-top: 0;
 }
 
@@ -124,7 +124,8 @@
     background-color: cadetblue;
     padding: 1%;
     margin: 1%;
-    flex-grow: 1;
+    margin-right: 1.25%;
+    
 }
 
 .publicidad {
@@ -132,13 +133,12 @@
     padding: 2%;
     margin: 3%;
     margin-top: 1%;
-    margin-bottom: 1%;
 }
 
 .pie {
     display: flex;
     margin: 1.25%;
-    padding: 0.5%;
+    padding: 1%;
     flex-grow: 1;
     background-color: yellow;
 }
