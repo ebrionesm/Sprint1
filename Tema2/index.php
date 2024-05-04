@@ -49,6 +49,30 @@
     echo "Suma: " . $X + $Y + $N + $M . "<br>";
     echo "Producto: " . $X * $Y * $N * $M . "<br>";
 
+    calculadora($X, $Y, "suma");
+    calculadora($X, $Y, "resta");
+    calculadora($X, $Y, "multiplicacion");
+    calculadora($X, $Y, "division");
 
+function calculadora($num1, $num2, $operacion)
+{
+    switch($operacion)
+    {
+        case "suma":
+            echo "Suma: " . $num1 + $num2 . "<br>";
+            break;
+        case "resta":
+            echo "Resta: " . $num1 - $num2 . "<br>";
+            break;
+        case "multiplicacion":
+            echo "Multiplicación: " . $num1 * $num2 . "<br>";
+            break;
+        case "division":
+            echo "División: " . $num1 / $num2 . "<br>";
+            break;
+            default:
+                echo "Valor no válido.<br>";
+    }
+}
 
 ?>
