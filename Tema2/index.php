@@ -41,7 +41,14 @@
     echo 'Producto: ' . $N*$M . "<br>";
     echo 'Módulo: ' . $N/$M . "<br>";
 
-    echo "X*2: " . $X*2;
+    echo "X*2: " . $X*2 . "<br>";
+    echo "Y*2: " . $Y*2 . "<br>";
+    echo "N*2: " . $N*2 . "<br>";
+    echo "M*2: " . $M*2 . "<br>";
+
+    echo "Suma: " . $X + $Y + $N + $M . "<br>";
+    echo "Producto: " . $X * $Y * $N * $M . "<br>";
+
 
 
 ?>
