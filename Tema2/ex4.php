@@ -2,9 +2,10 @@
     $numeroFinal = 15;
     $intervalo = 3;
 
-    contador($numeroFinal, $intervalo);
+    contador( $intervalo, $numeroFinal);
+    contador( $intervalo); //Con valor por defecto
 
-    function contador($numeroFinal = 10, $intervalo)
+    function contador($intervalo, $numeroFinal = 10)
     {
         echo "Número final: " . $numeroFinal . " . Intervalo: " . $intervalo . "<br>";
         for($i = 0; $i <= $numeroFinal; $i += $intervalo)
