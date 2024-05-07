@@ -28,10 +28,14 @@
     }
     
     [class="article-nav-container"]  {
-        flex-grow: 5;
+        flex-grow: 10;
     }
     [class="publicidad-container"] {
         flex-grow: 1;
+    }
+    [class = "publicidad"]
+    {
+        margin: 5%;
     }
 
 }
@@ -55,7 +59,7 @@
 
 .container, .second-container{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     background-color: black;
     padding: 1%;
     margin-top: 1%;
@@ -69,6 +73,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    flex-grow: 1;
     width: 97.5%;
     
 }
@@ -76,6 +81,7 @@
 .banner-container {
     justify-content: space-around;
     background-color:goldenrod;
+    flex-grow: 1;
     margin: 1%;
     width: 97.5%;
 }
@@ -96,7 +102,7 @@
 .article-container {
     display: flex;
     flex-grow: 1;
-    margin: 1%;
+    margin:1%;
     width: 97.5%;
 }
 
@@ -104,17 +110,16 @@
     background-color: darkslategray;
     flex-grow: 1;
     padding: 2%;
-    margin: 1.75%;
+    margin-left: 1%;
     margin-top: 1%;
-    margin-bottom: 1%;
+    margin-bottom: 0;
 }
 
 .navigation {
     background-color:aquamarine;
     flex-grow: 1;
     padding: 2%;
-    margin: 2.75%;
-    margin-right: 3.25%;
+    margin: 1.5%;
     margin-top: 0;
 }
 
@@ -124,15 +129,14 @@
     background-color: cadetblue;
     padding: 1%;
     margin: 1%;
-    margin-right: 1.25%;
     
 }
 
 .publicidad {
     background-color: yellow;
     padding: 2%;
-    margin: 3%;
-    margin-top: 1%;
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
 
 .pie {
