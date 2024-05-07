@@ -20,16 +20,16 @@ function cribaEratostenes($numero)
             for($j = $i; $j <= $numero/$i; $j++)
             {
                 array_push($listaNoPrimos, $i*$j);
-                echo $i*$j . "<br>";
             }
         }
     }
 
     $listaPrimos = array_diff($lista, $listaNoPrimos);
 
-    for($i = 0; $i < count($listaPrimos); $i++)
+    echo "Números primos hasta " . $numero . ": ";
+    foreach($listaPrimos as $valor)
     {
-        echo $listaPrimos[2];
+        echo $valor . " ";
     }
 }
 
