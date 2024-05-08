@@ -3,6 +3,10 @@
     [class*="container"]{
         flex-flow: column nowrap;
     }
+    [class = "publicidad"]
+    {
+        margin: 0.5%;
+    }
 }
 
 @media only screen and (min-width: 600px)
@@ -16,7 +20,12 @@
     }
 
     [class="article"] {
-        width: 40%;
+        width: 37.5%;
+    }
+    
+    [class = "publicidad"]
+    {
+        margin: 0.5%;
     }
     
 }
@@ -102,24 +111,25 @@
 .article-container {
     display: flex;
     flex-grow: 1;
-    margin:1%;
-    width: 97.5%;
+    width: 100%;
+    margin-bottom: 1%;
 }
 
 .article {
     background-color: darkslategray;
     flex-grow: 1;
     padding: 2%;
-    margin-left: 1%;
+    margin-left: 1.75%;
+    margin-right: 1.75%;
     margin-top: 1%;
     margin-bottom: 0;
 }
 
 .navigation {
-    background-color:aquamarine;
+    background-color: aquamarine;
     flex-grow: 1;
     padding: 2%;
-    margin: 1.5%;
+    margin: 1.75%;
     margin-top: 0;
 }
 
@@ -141,7 +151,8 @@
 
 .pie {
     display: flex;
-    margin: 1.25%;
+    justify-content: space-around;
+    margin: 1%;
     padding: 1%;
     flex-grow: 1;
     background-color: yellow;
