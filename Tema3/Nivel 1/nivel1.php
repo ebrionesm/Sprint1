@@ -24,13 +24,7 @@ echo "<br>Tamaño array: " . count($X);
 
 //Ex3
 
-$palabras = ["hola", "Php", "Html"];
-$caracter = "h";
-$contiene = contienenCaracter($palabras, $caracter);
-echo $contiene ? "<br>Todas las palabras contienen el carácter " : "<br>Alguna(s) de las palabras no contienen el carácter ";
-echo $caracter;
-
-function contienenCaracter($palabras, $caracter)
+function comprobarContienenCaracter(array $palabras, string $caracter) : bool
 {
     $contains = true;
     foreach($palabras as $palabra)
@@ -43,6 +37,14 @@ function contienenCaracter($palabras, $caracter)
 
     return $contains;
 }
+
+$palabras = ["hola", "Php", "Html"];
+$caracter = "h";
+$contiene = comprobarContienenCaracter($palabras, $caracter);
+echo $contiene ? "<br>Todas las palabras contienen el carácter " : "<br>Alguna(s) de las palabras no contienen el carácter ";
+echo $caracter;
+
+
 
 //Ex4
 

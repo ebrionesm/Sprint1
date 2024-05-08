@@ -1,6 +1,6 @@
 <?php
 
-function elevarCubo($numero)
+function elevarCubo(int $numero) : int
 {
     return pow($numero, 3);
 }
@@ -13,7 +13,4 @@ foreach($enterosCubo as $numero)
 {
     echo $numero . " ";
 }
-
-
-
 ?>
