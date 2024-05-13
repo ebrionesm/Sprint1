@@ -47,19 +47,25 @@ class PokerDice
             7 => 7
         ];
 
-        echo $figuras[$value];
+        echo "Resultado: " . $figuras[$value] . "<br>";
     }
 
 }
 
-function getTotalThrows(PokerDice $valor1, PokerDice $valor2) : int
+function getTotalThrows(array $dados) : int
 {
+    $valorTotal = 0;
+    foreach($dados as $dado)
+    {
+        $valorTotal +=  $dado->getValorActual();
+    }
     
-    return $valor1->getValorActual() + $valor2->getValorActual();
+    return $valorTotal;
 }
 
 $cantidadDados = 5;
 $dados = [];
+$totalValue = 0;
 
 for($i = 0; $i < $cantidadDados; $i++)
 {
@@ -71,41 +77,8 @@ foreach($dados as $dado)
     $dado->throw();
 }
 
-$totalValue = array_reduce($dados, "getTotalThrows");
+$totalValue = getTotalThrows($dados);
 
-echo $totalValue;
+echo "<br>Valor total de tiradas: " . $totalValue;
 
-
-
-
-/*for($i = 1; $i < 11; $i++)
-{
-    echo $i;
-}
-
-$numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9 ,10];
-
-foreach($numeros as $numero)
-{
-    echo $numero;
-}
-
-$numero = 0;
-while($numero < 10)
-{
-    $numero++;
-    echo $numero;
-}
-
-sumarUno(1);
-
-function sumarUno(int $valor)
-{
-    if($valor <= 10)
-    {
-        echo $valor;
-        $valor++;
-        sumarUno($valor);
-    }
-}*/
 ?>
