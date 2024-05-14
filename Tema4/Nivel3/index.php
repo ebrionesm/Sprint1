@@ -1,6 +1,53 @@
 <?php
 require("pelicula.php");
 require("cine.php");
+
+function buscarDirector(array $cines, string $director) : void
+{
+    $peliculasRepetidas = [];
+    $esRepetida = false;
+    $cinesEmision = [];
+    echo "Has buscado el director: " .  $director . ". Sus películas son:<br>";
+    foreach($cines as $cine)
+    {
+        foreach($cine->getPeliculas() as $pelicula)
+        {
+            if($pelicula->getDirector() == $director)
+            {
+                $esRepetida = comprobarPeliculaRepetida($pelicula, $peliculasRepetidas);
+                
+                array_push($peliculasRepetidas, $pelicula);
+                echo "Cine: " . $cine->getNombre() . "<br>";
+                if(!$esRepetida)
+                {
+                    echo($pelicula->mostrarInfo());
+                    array_push($cinesEmision, $cine);
+                }
+                $esRepetida = false;
+            }
+        }
+    }
+}
+
+function comprobarPeliculaRepetida(Pelicula $pelicula, array $peliculasRepetidas) : bool
+{
+    $esRepetida = false;
+    foreach($peliculasRepetidas as $peliRepe)
+    {
+        if($pelicula->getNombre() == $peliRepe->getNombre())
+        {
+            $esRepetida = true;
+        }
+    }
+
+    return $esRepetida;
+}
+
+function addPeliculaCine(Pelicula $pelicula, Cine $cine)
+{
+    array_push($pelicula->addCine($cine));
+}
+
 $pelicula1 = new Pelicula("Peli 1", 75, "Director 1");
 $pelicula2 = new Pelicula("Peli 2", 80, "Director 2");
 $pelicula3 = new Pelicula("Peli 3", 85, "Director 3");
@@ -12,6 +59,7 @@ $peliculas1 = [];
 $peliculas2 = [];
 
 array_push($peliculas1, $pelicula1, $pelicula3);
+
 array_push($peliculas2, $pelicula1,  $pelicula2, $pelicula4);
 
 $cine1 = new Cine("Cine 1", "Poblacion 1", $peliculas1);
@@ -27,33 +75,7 @@ foreach($cine1->getPeliculas() as $pelicula)
 
 buscarDirector($cines, "Director 1");
 
-function buscarDirector(array $cines, string $director) : void
-{
-    $peliculasRepetidas = [];
-    $esRepetida = false;
-    foreach($cines as $cine)
-    {
-        foreach($cine->getPeliculas() as $pelicula)
-        {
-            if($pelicula->getDirector() == $director)
-            {
-                foreach($peliculasRepetidas as $peliRepe)
-                {
-                    if($pelicula->getNombre() == $peliRepe->getNombre())
-                    {
-                        $esRepetida = true;
-                    }
-                }
-                array_push($peliculasRepetidas, $pelicula);
-                if(!$esRepetida)
-                {
-                    echo($pelicula->mostrarInfo());
-                }
-                $esRepetida = false;
-            }
-        }
-    }
-}
+
 
 
 ?>

@@ -2,8 +2,8 @@
 
 class Shape 
 {
-    private $altura;
-    private $ancho;
+    protected $altura;
+    protected $ancho;
 
     public function __construct(float $altura, float $ancho)
     {
