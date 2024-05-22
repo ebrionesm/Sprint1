@@ -19,6 +19,12 @@ final class NumberCheckerTester extends TestCase
         $testNumberChecker = new NumberChecker("numero");
     }
 
+    public function testConstructParameterNull() : void
+    {
+        $this->expectException(TypeError::class);
+        $testNumberChecker = new NumberChecker(NULL);
+    }
+
     public function testConstructParameterInt() : void
     {
         $this->expectException(TypeError::class);
@@ -33,8 +39,14 @@ final class NumberCheckerTester extends TestCase
 
     public function testIsEvenFalse() : void
     {
-        $isEvenChecker = new NumberChecker(5);;
+        $isEvenChecker = new NumberChecker(5);
         $this->assertFalse($isEvenChecker->isEven());
+    }
+
+    public function testIsEvenZero() : void
+    {
+        $isEvenChecker = new NumberChecker(0);
+        $this->assertTrue($isEvenChecker->isEven());
     }
 
     public function testIsPositiveBool() : void
@@ -52,7 +64,7 @@ final class NumberCheckerTester extends TestCase
     public function testIsPositiveZero() : void
     {
         $isPositiveChecker = new NumberChecker(0);
-        $this->assertTrue($isPositiveChecker->isPositive());
+        $this->assertFalse($isPositiveChecker->isPositive());
     }
 
 }
